@@ -1,5 +1,4 @@
 import React from "react";
-import WeatherSearch from "./WeatherSearch";
 
 import "./styles.css";
 
