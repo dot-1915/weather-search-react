@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function (currentDate){
-currentDate: {new Date(response.data.dt * 1000)};
+function (response){
+{new Date(response.data.dt * 1000)};
 }
 
 export default function FormattedDate(props) {
