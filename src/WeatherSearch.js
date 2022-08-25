@@ -21,7 +21,7 @@ export default function WeatherSearch() {
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "4f158b998cdd1f3876802fe0834b00f3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(displayWeather);
   }
@@ -41,15 +41,18 @@ export default function WeatherSearch() {
     </form>
   );
 
+
+
   if (loaded) {
     return (
       <div>
         {form}
         <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°F</li>
+          
+          <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {Math.round(weather.humidity)}%</li>
-          <li>Wind: {Math.round(weather.wind)}mph</li>
+          <li>Wind: {Math.round(weather.wind)}kph</li>
           <li>
             {" "}
             <img src={weather.icon} alt={weather.description} />
